@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borderwise - Visa Day Tracker</title>
+    <meta name="description" content="Track your visa days, monitor travel compliance, and never overstay again. Borderwise helps digital nomads, travelers, and expats manage their time abroad.">
+    <link rel="canonical" href="https://demolitionstudiosgames-netizen.github.io/borderwise-policies/">
+    <style>
+        :root {
+            --primary: #1E3A5F;
+            --secondary: #2DD4BF;
+            --background: #f8fafc;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d4a6f 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 3rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero .tagline {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            background: black;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .app-store-badge:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Zones Section */
+        .zones-section {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .zones-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .zone-badge {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d4a6f 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.1) 0%, rgba(30, 58, 95, 0.1) 100%);
+            padding: 60px 20px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-card p {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-author {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* Pricing */
+        .pricing-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--secondary);
+            position: relative;
+        }
+
+        .pricing-card.featured::before {
+            content: 'BEST VALUE';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--secondary);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .pricing-card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d4a6f 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            opacity: 0.9;
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+        }
+
+        .footer-section h4 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            color: var(--secondary);
+        }
+
+        .footer-section a {
+            display: block;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1000px;
+            margin: 32px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="app-icon">🌍</div>
+            <h1>Borderwise</h1>
+            <p class="tagline">Track your visa days. Travel with confidence. Never overstay.</p>
+            <a href="#" class="app-store-badge">Download on the App Store</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Everything You Need to Travel Smart</h2>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Visual Dashboard</h3>
+                <p>See all your visa zones at a glance with clear progress indicators and days remaining.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✈️</div>
+                <h3>Trip Management</h3>
+                <p>Log trips with entry/exit dates, visa types, and stamps. Import from your calendar.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛂</div>
+                <h3>Multiple Passports</h3>
+                <p>Dual citizens can track visa days independently for each passport nationality.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3>GPS Border Detection</h3>
+                <p>Automatically detect border crossings and create trips in the background.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏠</div>
+                <h3>Residence Tracking</h3>
+                <p>Monitor days in your home country for tax residency and compliance requirements.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Document Storage</h3>
+                <p>Securely store photos of passports, visas, and stamps on your device.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="zones-section">
+        <div class="container">
+            <h2 class="section-title">Supported Visa Zones</h2>
+            <div class="zones-grid">
+                <span class="zone-badge">🇪🇺 Schengen Area</span>
+                <span class="zone-badge">🇬🇧 United Kingdom</span>
+                <span class="zone-badge">🇺🇸 United States</span>
+                <span class="zone-badge">🇨🇦 Canada</span>
+                <span class="zone-badge">🇦🇺 Australia</span>
+                <span class="zone-badge">🇯🇵 Japan</span>
+                <span class="zone-badge">🇳🇿 New Zealand</span>
+                <span class="zone-badge">🇦🇪 UAE</span>
+                <span class="zone-badge">🇹🇭 Thailand</span>
+                <span class="zone-badge">+ Many More</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Loved by Travelers Worldwide</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Finally, an app that understands the Schengen 90/180 rule! No more spreadsheets."</p>
+                    <span class="testimonial-author">— Digital Nomad, Portugal</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The GPS tracking is a game-changer. It automatically logs my trips between countries."</p>
+                    <span class="testimonial-author">— Frequent Traveler, Germany</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"As a dual citizen, tracking visa days for both passports separately is exactly what I needed."</p>
+                    <span class="testimonial-author">— Expat, Spain</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <h2 class="section-title">Simple Pricing</h2>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h3>Free</h3>
+                <div class="price">$0</div>
+                <ul class="pricing-features">
+                    <li>Basic trip tracking</li>
+                    <li>Limited visa zones</li>
+                    <li>Document storage</li>
+                    <li>Manual trip entry</li>
+                </ul>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Premium</h3>
+                <div class="price">$4.99<span>/month</span></div>
+                <ul class="pricing-features">
+                    <li>Unlimited trips</li>
+                    <li>All visa zones</li>
+                    <li>GPS border tracking</li>
+                    <li>Custom trackers</li>
+                    <li>iCloud backup</li>
+                    <li>Export reports</li>
+                    <li>Priority support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Travel Smarter?</h2>
+        <p>Join thousands of travelers who trust Borderwise to manage their visa days.</p>
+        <a href="#" class="app-store-badge">Download Free on the App Store</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Borderwise</h4>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Track your visa days and travel with confidence.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="support.html">Help Center</a>
+                <a href="mailto:support@borderwise.app">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Borderwise. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

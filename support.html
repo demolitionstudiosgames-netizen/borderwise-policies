@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Borderwise</title>
+    <style>
+        :root {
+            --primary: #1E3A5F;
+            --secondary: #2DD4BF;
+            --background: #f8fafc;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d4a6f 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            margin: 20px 0 12px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.1) 0%, rgba(30, 58, 95, 0.1) 100%);
+            border: 2px solid var(--secondary);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .contact-box h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .contact-box a {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 12px;
+            transition: background 0.2s;
+        }
+
+        .contact-box a:hover {
+            background: #2d4a6f;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            color: var(--text);
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            background: var(--background);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-item h4 {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .feature-item p {
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .tip-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .tip-box p {
+            margin: 0;
+            color: var(--text);
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 24px 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links {
+            margin-top: 12px;
+        }
+
+        .nav-links a {
+            margin: 0 12px;
+            color: rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Support Center</h1>
+        <p>Borderwise - Visa Day Tracker</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>How Can We Help?</h2>
+            <p>We're here to help you get the most out of Borderwise. Find answers to common questions below, or contact us directly.</p>
+
+            <div class="contact-box">
+                <h3>Need Personal Assistance?</h3>
+                <p>Our support team typically responds within 24 hours.</p>
+                <a href="mailto:support@borderwise.app">Email Support</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Getting Started</h2>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">✈️</div>
+                    <h4>Add Trips</h4>
+                    <p>Log your travel with entry/exit dates</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <h4>Track Zones</h4>
+                    <p>Monitor Schengen, UK, USA & more</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛂</div>
+                    <h4>Passports</h4>
+                    <p>Create profiles for each passport</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h4>Dashboard</h4>
+                    <p>See all your visa days at a glance</p>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <p><strong>Pro Tip:</strong> Access the full User Guide within the app by going to Settings > User Guide for detailed instructions on all features.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <p class="faq-question">How accurate are the visa day calculations?</p>
+                <p class="faq-answer">Borderwise uses official visa rules for each zone, but immigration laws can change. Always verify with official embassy or government sources before traveling. The app is an informational tool, not legal advice.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Is my data secure?</p>
+                <p class="faq-answer">Yes! All your travel data is stored locally on your device. We never upload your personal information to our servers. If you enable iCloud backup, that data is stored in your personal iCloud account with Apple's encryption.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How does GPS border tracking work?</p>
+                <p class="faq-answer">When enabled (Premium feature), the app uses background location to detect when you cross international borders and can automatically create trips. This data stays on your device and is never uploaded.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Can I track multiple passports?</p>
+                <p class="faq-answer">Yes! You can create multiple passport profiles and switch between them. Each profile tracks visa days independently based on that passport's nationality.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">What's the difference between "Policy Max Days" and "Granted Days"?</p>
+                <p class="faq-answer">"Policy Max Days" is the general rule (like 90 days for Schengen). "Granted Days" is what the immigration officer actually stamped in your passport, which might differ from the policy.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I restore my data on a new device?</p>
+                <p class="faq-answer">If you have iCloud backup enabled, your data will sync automatically when you sign in with the same Apple ID. You can also manually export/import backups via the Settings menu.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Why does Schengen show 90/180 days?</p>
+                <p class="faq-answer">The Schengen Area uses a rolling 180-day window. You can stay up to 90 days within any 180-day period. Borderwise calculates this automatically based on your trip history.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I cancel my subscription?</p>
+                <p class="faq-answer">You can manage or cancel your subscription through your device's Settings > Apple ID > Subscriptions. Cancellations take effect at the end of the current billing period.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Can I use the app offline?</p>
+                <p class="faq-answer">Yes! Borderwise works completely offline. All calculations are done locally on your device. An internet connection is only needed for iCloud sync and subscription management.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">What are Custom Trackers?</p>
+                <p class="faq-answer">Custom Trackers (Premium) let you track any day-based requirement beyond standard visa rules—like tax residency (183 days), health insurance eligibility, or personal goals.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Troubleshooting</h2>
+
+            <h3>App crashes or freezes</h3>
+            <p>Try these steps:</p>
+            <ul>
+                <li>Close and reopen the app</li>
+                <li>Restart your device</li>
+                <li>Make sure you have the latest version from the App Store</li>
+                <li>If the problem persists, contact support with details about when the crash occurs</li>
+            </ul>
+
+            <h3>Data not syncing with iCloud</h3>
+            <ul>
+                <li>Check that iCloud is enabled in your device settings</li>
+                <li>Ensure you have sufficient iCloud storage</li>
+                <li>Verify you're signed into the same Apple ID on all devices</li>
+                <li>Try toggling iCloud backup off and on in the app settings</li>
+            </ul>
+
+            <h3>GPS tracking not working</h3>
+            <ul>
+                <li>Ensure location permissions are set to "Always" in device settings</li>
+                <li>Check that GPS tracking is enabled in the app settings</li>
+                <li>Note: GPS tracking requires a production build (not available in Expo Go during development)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Feature Requests & Feedback</h2>
+            <p>We love hearing from our users! If you have suggestions for new features or improvements, please email us. Your feedback directly shapes the future of Borderwise.</p>
+
+            <div class="contact-box">
+                <h3>Share Your Ideas</h3>
+                <p>Help us make Borderwise even better.</p>
+                <a href="mailto:support@borderwise.app?subject=Feature Request">Send Feedback</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> <a href="mailto:support@borderwise.app">support@borderwise.app</a></p>
+            <p><strong>Response Time:</strong> We aim to respond within 24 hours on business days.</p>
+            <p>When contacting support, please include:</p>
+            <ul>
+                <li>Your device model and iOS version</li>
+                <li>App version (found in Settings)</li>
+                <li>A description of the issue</li>
+                <li>Screenshots if applicable</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Borderwise. All rights reserved.</p>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="support.html">Support</a>
+        </div>
+    </footer>
+</body>
+</html>
